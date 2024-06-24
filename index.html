@@ -359,9 +359,12 @@
       </blockquote>
 
       <script>
-        const quotes = document.querySelectorAll('blockquote');
-        const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-        randomQuote.style.display = 'block';
+        let quote = document.querySelector(window.location.hash);
+        if (!quote) {
+          const quotes = document.querySelectorAll('blockquote');
+          quote = quotes[Math.floor(Math.random() * quotes.length)];
+        }
+        quote.style.display = 'block';
       </script>
     </main>
   </body>
