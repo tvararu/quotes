@@ -405,7 +405,7 @@
           const quotes = document.querySelectorAll("blockquote");
           quote = quotes[Math.floor(Math.random() * quotes.length)];
         }
-        quote.style.display = "block";
+        if (quote) quote.style.display = "block";
       </script>
     </main>
   </body>
