@@ -41,7 +41,9 @@
     </header>
 
     <script>
-      document.body.className += "js-enabled";
+      if (window.location.hash !== "#all") {
+        document.body.className += "js-enabled";
+      }
     </script>
 
     <noscript>
