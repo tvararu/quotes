@@ -451,14 +451,22 @@
         <footer>— Marcus Aurelius</footer>
       </blockquote>
 
+      <blockquote id="not-found">
+        <p>These are not the droids you are looking for.</p>
+        <footer>— Obi-Wan Kenobi</footer>
+        <p><em>The quote hash in the URL is not recognised.</em></p>
+      </blockquote>
+
       <script>
         if (window.location.hash) {
-          var quote = document.querySelector(window.location.hash);
+          var quote =
+            document.querySelector(window.location.hash) ||
+            document.querySelector("#not-found");
         } else {
           const quotes = document.querySelectorAll("blockquote");
           quote = quotes[Math.floor(Math.random() * quotes.length)];
         }
-        if (quote) quote.style.display = "block";
+        quote.style.display = "block";
       </script>
     </main>
   </body>
