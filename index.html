@@ -464,7 +464,8 @@
             document.querySelector("#not-found");
         } else {
           const quotes = document.querySelectorAll("blockquote");
-          quote = quotes[Math.floor(Math.random() * quotes.length)];
+          const range = quotes.length - 1; // Exclude the "not found" quote
+          quote = quotes[Math.floor(Math.random() * range)];
         }
         quote.style.display = "block";
       </script>
